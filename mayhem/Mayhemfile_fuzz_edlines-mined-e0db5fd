@@ -1,0 +1,9 @@
+project: savantenvs/opencv_contrib
+target: fuzz_edlines-mined-e0db5fd
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_edlines-mined-e0db5fd/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_edlines
+    libfuzzer: true
+    timeout: 30
