@@ -1,0 +1,9 @@
+project: savantenvs/opencv_contrib
+target: fuzz_img_hash
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_img_hash/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_img_hash
+    libfuzzer: true
+    timeout: 30
