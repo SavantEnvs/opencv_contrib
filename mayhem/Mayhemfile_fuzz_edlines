@@ -1,0 +1,10 @@
+# seed-from: https://app.mayhem.security/savantenvs/opencv-contrib/fuzz-edlines
+project: savantenvs/opencv_contrib
+target: fuzz_edlines-mined-2a5154a
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_edlines-mined-2a5154a/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_edlines
+    libfuzzer: true
+    timeout: 30
